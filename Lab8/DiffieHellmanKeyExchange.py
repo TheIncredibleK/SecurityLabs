@@ -24,7 +24,6 @@ def get_roots():
 
     prime_roots = get_primitive_roots(prime_modulus)
     initial_base = prime_roots[randint(0, len(prime_roots)-1)]
-
     alice_number = randint(1, prime_modulus-1)
     bob_number = randint(1, prime_modulus-1)
 
@@ -36,5 +35,8 @@ def get_roots():
     return s1, s2, prime_modulus, initial_base, alice_number, bob_number
 
 s1, s2, prime_modulus, inital_base, alice_number, bob_number = get_roots()
+
+print "Initial Agreed Base: " + str(inital_base)
+print "Prime Modulus :" + str(prime_modulus)
 print "Alice's Secret Number : " + str(s1)
 print "Bob's Secret Number : " + str(s2)
