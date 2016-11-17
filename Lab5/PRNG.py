@@ -30,3 +30,4 @@ def blum_blum_shub(p, q):
 key = pseudo_rando_initial_values()
 
 print(''.join(key))
+

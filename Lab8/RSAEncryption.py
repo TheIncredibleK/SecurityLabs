@@ -31,13 +31,17 @@ def modinv(key, totient):
     else:
         return x % totient
 
-def encode(letter, public_key):
-    letter_num  = (ord(letter) - ord('a')) + 1
-    new_letter = (letter_num**public_key[1])%public_key[0]
-    return chr(new_letter + ord('a') - 1)
+def encrypt(public, plaintext):
+    generated_key, primes_multipled = (public[1], public[0])
+    cipher = [(ord(char) ** generated_key) % primes_multipled for char in plaintext]
+    return cipher
 
-def decode(letter):
-    return ord(letter)
+def decrypt(private, primes_multiplied, ciphertext):
+    print private
+    print primes_multiplied
+    plain = [chr((char ** private) % primes_multiplied) for char in ciphertext]
+    return ''.join(plain)
+
 
 
 
@@ -50,10 +54,10 @@ coprimes = get_gcd(t)
 #print t
 #print "Co Primes" + str(coprimes)
 
-public_keys = [t, coprimes[randint(0,len(coprimes) -1)]]
+public_keys = [prime_mult, coprimes[randint(0,len(coprimes) -1)]]
 private_key = modinv(public_keys[1], t)
-print public_keys
-print private_key
-base_n = ord('a')
-end_n = ord('z')
-#print encode('', public_keys)
+print "Public Keys: " + str(public_keys)
+print "Private Key: " + str(private_key)
+encrypted_nums = encrypt(public_keys, 'Keith Kenny')
+chars = decrypt(private_key, prime_mult, encrypted_nums)
+print "Decoded Message: " + chars
