@@ -1,6 +1,5 @@
 import pyDes
-from Crypto.Cipher import AES
-from Crypto import Random
+import pyaes
 
 
 def encrypt(key, mode, plaintext, iv=None, pad=None, cipher=None):
