@@ -1,5 +1,6 @@
 from random import randint
 from math import pow
+
 def get_roots():
     def gcd(a,b):
         while b != 0:

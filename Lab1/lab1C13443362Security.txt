@@ -1,0 +1,16 @@
+Q1) Run Ceaser:
+key: 10
+Text to encrpyt: keith kenny
+Result of encryption: uosdr uoxxi
+
+Text to decrypt: uosdr uoxxi
+Result of decryption: keith kenny
+
+--------------------------------
+Q2) Run Fence:
+key: 2
+Text to encrypt: keith kenny
+Result of encryption: kihknyet en
+
+Text to decrypt: kihknyet en
+Result of decryption: keith kenny

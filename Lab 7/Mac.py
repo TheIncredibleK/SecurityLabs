@@ -1,5 +1,4 @@
 import Crypto.Hash.HMAC as hmac
-
 secret_string = "MessageFromKeith"
 
 maccer = hmac.new(secret_string)

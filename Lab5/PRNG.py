@@ -1,18 +1,8 @@
-import time
-import numpy
-primes = [3851, 4007, 4639, 5501, 6121]
+import scipy.special as spc
+import math
 
-def pseudo_rando_initial_values():
-    cur_time = str(time.time())
-    cur_time_no_dot = [int(l) for l in cur_time if l != '.']
-
-    p = primes[sum(cur_time_no_dot)%5]
-    q = primes[numpy.product(cur_time_no_dot)%5]
-    if p == q:
-        p = primes[sum(cur_time_no_dot) + 1 % 5]
-
-    return blum_blum_shub(p,q)
-
+p = 6121
+q = 3851
 
 def blum_blum_shub(p, q):
     n = p * q
@@ -27,7 +17,24 @@ def blum_blum_shub(p, q):
 
     return to_return
 
-key = pseudo_rando_initial_values()
+key = blum_blum_shub(p,q)
 
-print(''.join(key))
+
+## monobit test from r4and0m
+def monobit(bin_data):
+    count = 0
+
+    for bit_number in bin_data:
+        if bit_number == '0':
+            count -= 1
+        else:
+            count += 1
+
+    sobs = count / math.sqrt(len(bin_data))
+    p_val = spc.erfc(math.fabs(sobs) / math.sqrt(2))
+    return p_val
+data__ = ''.join(key)
+print data__
+print monobit(data__)
+
 
