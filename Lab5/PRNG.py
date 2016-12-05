@@ -9,7 +9,7 @@ def blum_blum_shub(p, q):
     s = ((n * p)/q)%n
     x = (s*s)%n
     to_return = []
-    for i in range(256):
+    for i in range(200):
         y = (x*x)%n
         x = y
         to_add = str(y%2)

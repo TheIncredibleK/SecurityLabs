@@ -1,0 +1,12 @@
+The pseudo random number generator I implemented is blum blum shub.
+This creates a pseudo random of binary digits, 0 or 1.
+
+I chose to crate 200 values in this pseudo random list of keys:
+
+Here is that generated string of values:
+01011000110000010000100110110111101010101101101000100110110001011000110000010000100110110111101010101101101000100110110001011000110000010000100110110111101010101101101000100110110001011000110000010000
+
+The test I did is monobit, which checks how evenly distributed the 0's and 1's are:
+A desired value is between 1 and 0.
+the value this string of digits returns is
+0.157
