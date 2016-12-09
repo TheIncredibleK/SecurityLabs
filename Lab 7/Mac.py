@@ -3,7 +3,7 @@ secret_string = "MessageFromKeith"
 
 maccer = hmac.new(secret_string)
 
-plain_text_message = "Attack At Dawn"
+plain_text_message = "AAAABBBBCCCCD"
 maccer.update(plain_text_message)
 hex_for_authenticity = maccer.digest().encode("HEX").upper()
 
@@ -17,7 +17,7 @@ print "If sender message is uncompromised"
 print "Recieved HEX: " + hex_for_authenticity
 reciever_hmac = hmac.new(secret_string)
 reciever_hmac.update(sent_message[0])
-generated_hex_for_authenticity = maccer.digest().encode("HEX").upper()
+generated_hex_for_authenticity = reciever_hmac.digest().encode("HEX").upper()
 print "Generated HEX: " + generated_hex_for_authenticity
 
 print "This message is genuine: " + str(generated_hex_for_authenticity == sent_message[1])

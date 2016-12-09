@@ -2,19 +2,19 @@ from random import randint
 from math import pow
 
 def get_roots():
-    def gcd(a,b):
-        while b != 0:
-            a, b = b, a % b
-        return a
+    def greatest_common_divisor(number_a, number_b):
+        while number_b != 0:
+            number_a, number_b = number_b, number_a % number_b
+        return number_a
 
-    def get_primitive_roots(modulo):
+    def get_primitive_roots(wanted_mod):
         roots = []
-        required_set = set(num for num in range (1, modulo) if gcd(num, modulo) == 1)
+        necessary_numbers = set(integer for integer in range (1, wanted_mod) if greatest_common_divisor(integer, wanted_mod) == 1)
 
-        for g in range(1, modulo):
-            actual_set = set(pow(g, powers) % modulo for powers in range (1, modulo))
-            if required_set == actual_set:
-                roots.append(g)
+        for each_mod in range(1, wanted_mod):
+            the_set = set(pow(each_mod, each_power) % wanted_mod for each_power in range (1, wanted_mod))
+            if necessary_numbers == the_set:
+                roots.append(each_mod)
         return roots
     prime_roots = []
     prime_modulus = 0

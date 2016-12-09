@@ -1,0 +1,29 @@
+Hash Function:
+Has function used:SHA256
+
+Plaintext = AAAABBBBCCCCD
+Encrypted in hex: 37DF7FCD0EB3839267E194DCF15698032F3479835BB815AA050378BC25355BC1
+
+
+Mac Function:
+Mac used: HMAC
+
+Mac functions are for checking to ensure data is the same as what was sent,
+and it also ensures you know who sent the message.
+Depending on the underlying hash, the output length varies.
+
+--------------------------------------------------------------
+Secret String: "MessageFromKeith"
+Plain text: "AAAABBBBCCCCD"
+
+Proof:
+
+If sender message is uncompromised
+Recieved HEX: 2C41DA0BB6203690366DC876917CAF96
+Generated HEX: 2C41DA0BB6203690366DC876917CAF96
+This message is genuine: True
+
+In the case of a compromised message
+Recieved HEX: 2C41DA0BB6203690366DC876917CAF96
+Generated HEX: 4898EA45C6003EE0C4C492D4B8930945
+This message is genuine: False

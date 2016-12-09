@@ -1,0 +1,10 @@
+Question 1:
+All pixels are contained in the file 'image_pixels.txt'.
+I was unsure what you wanted when you said 'print the image file'.
+So I iterated through each pixel and printed it's pixel value in a file called image_pixels.txt
+Then I wrote the image file to a new file called "new_image_file.png"
+
+Question 2:
+My plain text is "keith kenny C13443362"
+When it is encrypted then decrpyted it shows:
+"keith kenny C13443362"

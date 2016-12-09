@@ -1,0 +1,11 @@
+Stream cipher used:
+ARC4
+
+key : '123456'
+Plain text: keith kenny
+Encrypted: k�L~�Y[      IN HEX: 6b9d17134c137ef911595b
+Decrypted: keith kenny
+
+
+
+

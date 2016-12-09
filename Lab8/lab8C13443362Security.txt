@@ -1,0 +1,30 @@
+Question 1: RSA Encryption
+
+Example Output:
+
+Public Keys: [391, 17]
+Private Key: 145
+Encoded Integer:[58L, 118L, 190L, 116L, 308L, 49L, 58L, 118L, 8L, 8L, 104L]
+Decoded Message: Keith Kenny
+------------------------------------------------------------
+Public Keys: [391, 291]
+Private Key: 75
+Encoded Integers: [71L, 169L, 27L, 24L, 110L, 77L, 71L, 169L, 325L, 325L, 25L]
+Decoded Message: Keith Kenny
+
+
+Question 2: Diffie Hellman Key Exchange
+
+Example output:
+
+--------------------------
+Initial Agreed Base: 1
+Prime Modulus :2
+Alice's Secret Number : 1.0
+Bob's Secret Number : 1.0
+--------------------------
+Initial Agreed Base: 3
+Prime Modulus :5
+Alice's Secret Number : 1.0
+Bob's Secret Number : 1.0
+--------------------------
